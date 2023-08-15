@@ -20,6 +20,7 @@ a.	 UserProductService
 
 4.	Write the code in the following files
     a.	Goto database.js file under the config folder and implement the code of connecting with database
+    
     b.	Goto product.js file under the controller folder and implement the following code
         i.	Implement the code to get the product details inside getProducts method.
         ii.	Implement the code to add the product details inside addProduct method.
