@@ -24,7 +24,15 @@ const addProduct = async (req, res) => {
 };
 
 const deleteProduct = async (req, res) => {
-  // Write the code to delete the product details
+  try {
+    // Write the code to delete the product details
+
+    const { id } = req.query;
+    const results = await Product.deleteOne(id);
+    return res.status(200).send(results);
+  } catch (error) {
+    return res.status(500).send(error?.message);
+  }
 };
 
 module.exports = { getProducts, addProduct, deleteProduct };
